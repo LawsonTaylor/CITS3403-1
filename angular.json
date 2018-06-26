@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "learn-angular": {
+    "starwars-db-test": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/learn-angular",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "learn-angular:build"
+            "browserTarget": "starwars-db-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "learn-angular:build:production"
+              "browserTarget": "starwars-db-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "learn-angular:build"
+            "browserTarget": "starwars-db-test:build"
           }
         },
         "test": {
@@ -73,6 +73,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -96,7 +97,7 @@
         }
       }
     },
-    "learn-angular-e2e": {
+    "starwars-db-test-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -104,11 +105,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "learn-angular:serve"
+            "devServerTarget": "starwars-db-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "learn-angular:serve:production"
+              "devServerTarget": "starwars-db-test:serve:production"
             }
           }
         },
@@ -124,5 +125,5 @@
       }
     }
   },
-  "defaultProject": "learn-angular"
+  "defaultProject": "starwars-db-test"
 }
