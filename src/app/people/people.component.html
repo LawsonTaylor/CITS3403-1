@@ -1,0 +1,51 @@
+
+<!-- display number of Charcters queried -->
+<h5 id="results" >Charcters: {{ people.length }}</h5> 
+<!-- List of loaded Charcters -->
+<ul class="charcters">
+<li *ngFor="let person of people" class="card">
+  <div class="details">
+    <div class="init-square" [ngStyle]="{ 'background-color': person.colour }"><span class="init-text">{{ person.init }}</span></div>
+    <!-- Person Details -->
+    <div class="details-text">
+      <h4>{{ person.name }}</h4>
+      <div class="detail-text-container">
+        <p class="text">
+          <span>Height: </span>{{person.height}} <br>
+          <span>Mass: </span>{{person.mass}}     <br>
+          <span>Gender: </span>{{person.gender}} <br>
+        </p>
+        <p class="text">
+            <span>Born: </span>{{person.birth_year}} <br>
+            <span>Hair Colour: </span>{{person.hair_color}} <br>
+            <span>Eye Colour: </span>{{person.eye_color}} <br>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Planet Half of Data -->
+  <div class="planet details">
+    <div *ngIf="planetImageExists(planets[person.homeworld].name); else noPlanetImage">
+        <img [src]="person.homeworld_url(person.homeworld)">
+    </div>
+    <ng-template #noPlanetImage>
+        <img src="../../assets/images/planet.png">
+    </ng-template>
+    <!-- Planet Details -->
+    <div class="details-text">
+      <h4>of {{ planets[person.homeworld].name }}</h4>
+      <div  class="detail-text-container">
+        <p class="text">
+          <span>Day Length: </span>{{planets[person.homeworld].rotation_period}}     <br>
+          <span>Diameter: </span>{{planets[person.homeworld].diameter}} <br>
+          <span>Climate: </span>{{planets[person.homeworld].climate}} <br>
+        </p>
+        <p class="text">
+            <span>Terrain: </span>{{planets[person.homeworld].terrain}} <br>
+            <span>Population: </span>{{planets[person.homeworld].population}} <br>
+        </p>
+      </div>
+    </div>
+  </div>
+</li>
+</ul>

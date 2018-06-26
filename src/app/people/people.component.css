@@ -1,0 +1,114 @@
+ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+#results {
+  padding-top: 8px;
+  margin-bottom: 0px;
+  font-family: 'Space Mono', monospace;
+}
+
+.card {
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.init-text{
+  position: relative;
+  top: 8px;
+  font-size: 50px;
+  color: #fff;
+}
+
+.init-square {
+  height: 90px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: #0288d1;
+  text-align: center;
+}
+
+.details {
+  padding: 30px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  min-width: 375;
+}
+
+.details-text{
+  padding-left: 30px;
+}
+
+.detail-text-container{
+  text-align: left;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Space Mono', monospace;
+}
+
+.text {
+  color: #B3B3B3;
+  padding-right: 40px;
+}
+
+.planet {
+  padding: 30px;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+
+/* Enusres child paragraphs break before container for better flow */
+@media only screen and (max-width: 1200px) {
+  .detail-text-container{
+    flex-direction: column;
+  }
+}
+/* Small Screens and Partial windows */
+/* Return paragraphs to row flex for better flow */
+@media only screen and (max-width: 830px) {
+  .detail-text-container{
+    flex-direction: row;
+  }
+}
+/* Small Devices: Tablets + Phones */
+/* reduce font size + padding slightly and darken for better contrast */
+@media only screen and (max-width: 620px) {
+  .detail-text-container{
+    font-size: 0.9em;
+  }
+  .text {
+    padding-right: 20px;
+    color: #404040;
+  }
+}
+/* Very Small Devices: Older Phones*/
+/* All content align vertically, remove padding for text box bufffering */
+@media only screen and (max-width: 344px) {
+  .details{
+    display: flex;
+    flex-direction: column;
+  }
+  .details-text{
+    padding: 0;
+    padding-top: 20px;
+  }
+  .text {
+    padding-right: 0px;
+  }
+}
+
+
