@@ -5,8 +5,8 @@
     "name": "Lawson Taylor"
   },
   "engines": {
-    "node": "6.11.0",
-    "npm": "3.10.10"
+    "node": "10.4.0",
+    "npm": "6.1.0"
   },
   "scripts": {
     "ng": "ng",
@@ -15,7 +15,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build -prod"
   },
   "private": true,
   "dependencies": {
