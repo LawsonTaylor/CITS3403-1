@@ -1,6 +1,7 @@
 # Star-Wars DB
 
 My first attempt at a simple Angular site.
+View the porject live [here on Heroku](https://star-wars-idle-test.herokuapp.com/)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Notes
